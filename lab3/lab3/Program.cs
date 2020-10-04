@@ -31,7 +31,7 @@ namespace lab3
             Phone phone5 = new Phone();
             phone5.Show1();
 
-            Phone phone6 = new Phone("Котов", "Юрий", 30000, 130, 0);
+            Phone phone6 = new Phone("Николаев", "Николай", 30000, 130, 0);
             phone6.Show2();
 
             Phone phone7 = new Phone("Андреев", "Андрей", 12000, 60, 0);
@@ -51,7 +51,7 @@ namespace lab3
             ListOfPhone[5] = phone6;
             ListOfPhone[6] = phone7;
             ListOfPhone[7] = phone8;
-            Console.WriteLine("########");
+            Console.WriteLine("_______");
             Console.WriteLine("Сортировка абонентов по выбору связи");
             Console.WriteLine();
             Console.WriteLine("Абоненты, превышающих внутригородское время ");
@@ -60,7 +60,7 @@ namespace lab3
                 count++;
                 if (phones.In_city_time>110) Console.WriteLine(phones.Surname+" "+ phones.Name+" "+phones.Fathername);
             }
-            Console.WriteLine("#######");
+            Console.WriteLine("_______");
             Console.WriteLine("Фамилии тех, кто пользовался межгородской связью ");
             foreach (Phone phones in ListOfPhone)
             {
@@ -262,7 +262,7 @@ namespace lab3
         {
             Random random = new Random();
             id = random.Next(1, 15);
-            int key = ((int)credit * 13 + name.Length) / id * 6;
+            int key = (credit * 13 + name.Length) / id * 6;
             uint hash = (uint)key;
             return hash;
         }
